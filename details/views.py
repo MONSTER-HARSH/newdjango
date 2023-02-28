@@ -23,7 +23,7 @@ def store(request):
 
 def index(request):
     container_obj= container.objects.all()
-    return render(request, 'forms.html',{'container':container_obj})
+    return render(request, 'tables.html',{'container':container_obj})
 
 def viewcontainer(request, pk):
    container_obj = container.objects.get(container_id = pk)

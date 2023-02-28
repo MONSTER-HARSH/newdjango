@@ -1,24 +1,25 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
   <head> 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Yard Management </title>
+    <title>Yard Management</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
     <!-- Custom Font Icons CSS-->
-    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="{% static 'css/font.css' %}">
     <!-- Google fonts - Muli-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.default.css' %}" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     <!-- Favicon-->
     <link rel="shortcut icon" href="https://www.atai.ai/wp-content/themes/atai/favicon-2023/favicon.ico">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -56,7 +57,7 @@
                 <li><a href="index.html"> <i class="icon-home"></i>Home </a></li>
                 <li class="active"><a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>
  
-                <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
+                <li><a href="/create"> <i class="icon-padnote"></i>Forms </a></li>
       </nav>
       <!-- Sidebar Navigation end-->
       <div class="page-content">
@@ -83,20 +84,23 @@
                     <table class="table">
                       <thead>
                         <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
+                          <th>container id</th>
+                          <th>container Name</th>
+                          <th>container status</th>
+                          <th>container size</th>
+                          <th>cargo type</th>
                         </tr>
                       </thead>
                       <tbody>
-                        for
+                        {% for i in container %}
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
+                          <td>{{i.container_id}}</td>
+                          <td>{{i.container_name}}</td>
+                          <td>{{i.container_status}}</td>
+                          <td>{{i.container_size}}</td>
+                          <td>{{i.cargo}}</td>
                         </tr>
+                        {% endfor %}
                       </tbody>
                     </table>
                   </div>
@@ -119,12 +123,12 @@
       </div>
     </div>
     <!-- JavaScript files-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper.js/umd/popper.min.js"> </script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
-    <script src="js/front.js"></script>
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/popper.js/umd/popper.min.js' %}"> </script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery.cookie/jquery.cookie.js' %}"> </script>
+    <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery-validation/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/front.js' %}"></script>
   </body>
 </html>

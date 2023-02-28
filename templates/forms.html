@@ -68,9 +68,9 @@
         <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
         <ul class="list-unstyled">
                 <li><a href="index.html"> <i class="icon-home"></i>Home </a></li>
-                <li><a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>
+                <li><a href="/"> <i class="icon-grid"></i>Tables </a></li>
    
-                <li class="active"><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
+                <li class="active"><a href="/create"> <i class="icon-padnote"></i>Forms </a></li>
       </nav>
       <!-- Sidebar Navigation end-->
       <div class="page-content">
@@ -95,7 +95,8 @@
                 <div class="block">
                   <div class="title"><strong class="d-block">container details forms</strong><span class="d-block">Enter the details about the container</span></div>
                   <div class="block-body">
-                    <form action="/store" methdo="post">
+                    <form action="/store" method="POST">
+                      {% csrf_token %}
                       <div class="form-group">
                         <label class="form-control-label">container id</label>
                         <input type="number" placeholder="container id" class="form-control" name="id">
@@ -105,14 +106,14 @@
                         <input type="text" placeholder="container name" class="form-control" name="name">
                       </div>
                         <label class="form-control-label">container status</label>
-                        <select id="container_status" name="container_status">
+                        <select id="container_status" name="status">
                           <option value="E">Empty</option>
                           <option value="L">Laden</option>
                         </select>
-                      </div>
+                        </div>
                       <div class="form-group">       
                         <label class="form-control-label"> container size</label>
-                        <select id="cargo" name="cargo">
+                        <select id="size" name="size">
                           <option value="20">20</option>
                           <option value="40">40</option>
                         </select>
