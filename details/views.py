@@ -12,11 +12,11 @@ def createcontainer(request):
 
 def store(request):
     container_obj = container()
-    container_obj.container_id = request.POST.get('container_id')
-    container_obj.container_name = request.POST.get('container_name')
-    container_obj.container_status = request.POST.get('')
-    container_obj.container_size = request.POST.get('')
-    container_obj.cargo= request.POST.get('')
+    container_obj.container_id = request.POST.get('id')
+    container_obj.container_name = request.POST.get('name')
+    container_obj.container_status = request.POST.get('status')
+    container_obj.container_size = request.POST.get('size')
+    container_obj.cargo= request.POST.get('cargo')
     container_obj.save()
     messages.success(request, "container Created Successfully")
     return redirect('/create')

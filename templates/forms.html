@@ -95,7 +95,7 @@
                 <div class="block">
                   <div class="title"><strong class="d-block">container details forms</strong><span class="d-block">Enter the details about the container</span></div>
                   <div class="block-body">
-                    <form>
+                    <form action="/store" methdo="post">
                       <div class="form-group">
                         <label class="form-control-label">container id</label>
                         <input type="number" placeholder="container id" class="form-control" name="id">
@@ -105,22 +105,24 @@
                         <input type="text" placeholder="container name" class="form-control" name="name">
                       </div>
                         <label class="form-control-label">container status</label>
-                        <input type="email" placeholder="Email Address" class="form-control" name="status">
+                        <select id="container_status" name="container_status">
+                          <option value="E">Empty</option>
+                          <option value="L">Laden</option>
+                        </select>
                       </div>
                       <div class="form-group">       
                         <label class="form-control-label"> container size</label>
-                        <input type="password" placeholder=" container_size" class="form-control" name="size">
+                        <select id="cargo" name="cargo">
+                          <option value="20">20</option>
+                          <option value="40">40</option>
+                        </select>
                       </div>
                         <label class="form-control-label">cargo</label>
-                        <div class="dropdown">
-                          <button class="dropbtn">Dropdown</button>
-                          <div class="dropdown-content">
-                          <a href="#">Link 1</a>
-                          <a href="#">Link 2</a>
-                          <a href="#">Link 3</a>
-                          </div>
-                        </div>
-                        
+                        <select id="cargo" name="cargo">
+                          <option value="D">Dry goods</option>
+                          <option value="H">Hazardous materials</option>
+                          <option value="L">Liquid cargo</option>
+                        </select>
                       </div>
                       <div class="form-group">       
                         <input type="submit" value="Submit" class="btn btn-primary">
