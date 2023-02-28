@@ -27,7 +27,7 @@ def index(request):
 
 def viewcontainer(request, pk):
    container_obj = container.objects.get(container_id = pk)
-   return render(request, 'containerview.html',{'container':container_obj})
+   return render(request, 'index.html',{'container':container_obj})
 
 def deletecontainer(request, pk):
     container_obj= container.objects.get(container_id = pk)
@@ -36,5 +36,6 @@ def deletecontainer(request, pk):
     return redirect('/')
 
 def updatecontainer(request,pk):
+    
     container_obj = container.objects.get(container_id = pk)
-    return render(request,'update.html',{'container':container_obj})
+    return render(request,'index.html',{'container':container_obj})
