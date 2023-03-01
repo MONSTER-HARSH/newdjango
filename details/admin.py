@@ -4,5 +4,5 @@ from .models import container
 @admin.register(container)
 
 class containerAdmin(admin.ModelAdmin):
-    list_display=( 'container_id', 'container_name', 'container_status', 'container_size', 'cargo', )
+    list_display=( 'container_id', 'container_name','container_location', 'container_status', 'container_size', 'cargo',)
 

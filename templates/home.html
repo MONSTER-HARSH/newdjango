@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 {% load static %}
 <html>
@@ -27,22 +26,13 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
-  <style>
-    
-  </style>
   <body>
-
     <header class="header">   
       <nav class="navbar navbar-expand-lg">
         <div class="search-panel">
           <div class="search-inner d-flex align-items-center justify-content-center">
             <div class="close-btn">Close <i class="fa fa-close"></i></div>
-            <form id="searchForm" action="#">
-              <div class="form-group">
-                <input type="search" name="search" placeholder="What are you searching for...">
-                <button type="submit" class="submit">Search</button>
-              </div>
-            </form>
+    
           </div>
         </div>
         <div class="container-fluid d-flex align-items-center justify-content-between">
@@ -50,99 +40,67 @@
             <!-- Navbar Header--><a href="/home" class="navbar-brand">
               <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">Yard</strong><strong>Management</strong></div>
               <div class="brand-text brand-sm"><strong class="text-primary">Y</strong><strong>M</strong></div></a>
-                <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
-            
-            </div>
-
+            <!-- Sidebar Toggle Btn-->
+            <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
           </div>
-        </div>
-      </nav>
+  
+            
+         
     </header>
     <div class="d-flex align-items-stretch">
       <!-- Sidebar Navigation-->
       <nav id="sidebar">
         <!-- Sidebar Header-->
-        <div class="sidebar-header d-flex align-items-center">
- 
-        </div>
+        <div class="sidebar-header d-flex align-items-center"></div>
         <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
         <ul class="list-unstyled">
-                <li><a href="/home"> <i class="icon-home"></i>Home </a></li>
-                <li><a href="/"> <i class="icon-grid"></i>Conatiners </a></li>
-   
-                <li class="active"><a href="/create"> <i class="icon-padnote"></i>Forms </a></li>
+                <li class="active"><a href="/home"> <i class="icon-home"></i>Home </a></li>
+                <li ><a href="/"> <i class="icon-grid"></i>Conatiners </a></li>
+ 
+                <li><a href="/create"> <i class="icon-padnote"></i>Forms </a></li>
       </nav>
       <!-- Sidebar Navigation end-->
       <div class="page-content">
         <!-- Page Header-->
         <div class="page-header no-margin-bottom">
           <div class="container-fluid">
-            <h2 class="h5 no-margin-bottom">container details forms</h2>
+            <h2 class="h5 no-margin-bottom">Home</h2>
           </div>
         </div>
         <!-- Breadcrumb-->
         <div class="container-fluid">
           <ul class="breadcrumb">
             <li class="breadcrumb-item"><a href="/home">Home</a></li>
-            <li class="breadcrumb-item active">container details forms           </li>
+            <li class="breadcrumb-item active">About</li>
           </ul>
         </div>
         <section class="no-padding-top">
           <div class="container-fluid">
             <div class="row">
-              <!-- Basic Form-->
-              <div class="col-lg-11">
-                <div class="block">
-                  <div class="title"><strong class="d-block">container details forms</strong><span class="d-block">Enter the details about the container</span></div>
-                  <div class="block-body">
-                    <form action="/store" method="POST">
-                      {% csrf_token %}
-                      <div class="form-group">       
-                        <label class="form-control-label">container number</label>
-                        <input type="text" placeholder="container name" class="form-control" name="name">
-                      </div>
-                      <div class="form-group">       
-                        <label class="form-control-label">container location</label>
-                        <input type="text" placeholder="container location" class="form-control" name="location">
-                      </div>
-                        <label class="form-control-label">container status</label>
-                        <select id="container_status" name="status" class="form-control">
-                          <option value="E">Empty</option>
-                          <option value="L">Laden</option>
-                        </select>
-                        </div>
-                      <div class="form-group">       
-                        <label class="form-control-label"> container size</label>
-                        <select id="size" name="size" class="form-control">
-                          <option value="20">20</option>
-                          <option value="40">40</option>
-                        </select>
-                      </div>
-                        <label class="form-control-label">cargo</label>
-                        <select id="cargo" name="cargo" class="form-control">
-                          <option value="D">Dry goods</option>
-                          <option value="H">Hazardous materials</option>
-                          <option value="L">Liquid cargo</option>
-                        </select>
-                      </div>
-                      <div class="form-group">       
-                        <input type="submit" value="Submit" class="btn btn-primary">
-                      </div>
-                    </form>
+              <div class="col-lg-12">
+                <div class="block margin-bottom-sm">
+                  <div class="title"><strong> About Container Details </strong></div>
+  
+                  </div>
+                </div>
+              </div>  <div class="block-body">
+                        <p>In yard management, a container refers to a standardized shipping container used for transporting goods via multiple modes of transportation, such as ships, trucks, and trains. These containers are typically made of steel or aluminum and come in various sizes, ranging from 20 feet to 40 feet in length.</p>
+                        <p>Container management is a critical component of yard management, as it involves tracking the movement and storage of containers within a specific facility or yard. This includes the scheduling of inbound and outbound container movements, as well as the storage of containers in designated areas based on their contents, destination, and priority.</p>
+                        <p>A container yard is a designated area where containers are stored before being loaded onto a ship or truck for transport. Container yards typically have designated areas for different types of containers, such as refrigerated containers, hazardous material containers, and oversized containers. Efficient container management can improve yard productivity, reduce operational costs, and enhance supply chain efficiency.</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Horizontal Form-->
-    
-          <footer class="footer">
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
           <div class="footer__block block no-margin-bottom">
             <div class="container-fluid text-center">
               <p class="no-margin-bottom">2023 &copy; Your company ATAI. <a target="_blank" href="https://www.atai.ai/">ATAI.ai</a>.</p>
             </div>
           </div>
         </footer>
-      </div>
-
       </div>
     </div>
     <!-- JavaScript files-->

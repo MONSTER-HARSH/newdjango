@@ -37,7 +37,7 @@
         </div>
         <div class="container-fluid d-flex align-items-center justify-content-between">
           <div class="navbar-header">
-            <!-- Navbar Header--><a href="index.html" class="navbar-brand">
+            <!-- Navbar Header--><a href="/home" class="navbar-brand">
               <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">Yard</strong><strong>Management</strong></div>
               <div class="brand-text brand-sm"><strong class="text-primary">Y</strong><strong>M</strong></div></a>
             <!-- Sidebar Toggle Btn-->
@@ -54,8 +54,8 @@
         <div class="sidebar-header d-flex align-items-center"></div>
         <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
         <ul class="list-unstyled">
-                <li><a href="index.html"> <i class="icon-home"></i>Home </a></li>
-                <li class="active"><a href="/"> <i class="icon-grid"></i>Tables </a></li>
+                <li><a href="/home"> <i class="icon-home"></i>Home </a></li>
+                <li class="active"><a href="/"> <i class="icon-grid"></i>Conatiners </a></li>
  
                 <li><a href="/create"> <i class="icon-padnote"></i>Forms </a></li>
       </nav>
@@ -64,14 +64,14 @@
         <!-- Page Header-->
         <div class="page-header no-margin-bottom">
           <div class="container-fluid">
-            <h2 class="h5 no-margin-bottom">Tables</h2>
+            <h2 class="h5 no-margin-bottom">Conatiners</h2>
           </div>
         </div>
         <!-- Breadcrumb-->
         <div class="container-fluid">
           <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">EDIT Tables            </li>
+            <li class="breadcrumb-item"><a href="/home">Home</a></li>
+            <li class="breadcrumb-item active">EDIT Conatiners            </li>
           </ul>
         </div>
         <section class="no-padding-top">
@@ -83,16 +83,16 @@
                   <div class="table-responsive"> 
                     <form action="/store" method="POST">
                       {% csrf_token %}
-                      <div class="form-group">
-                        <label class="form-control-label">container id</label>
-                        <input type="number" placeholder="container id" class="form-control" name="id" value="{{container.container_id}}">
-                      </div>
                       <div class="form-group">       
-                        <label class="form-control-label">container name</label>
+                        <label class="form-control-label">container number</label>
                         <input type="text" placeholder="container name" class="form-control" name="name" value="{{container.container_name}}">
                       </div>
+                    <div class="form-group">       
+                        <label class="form-control-label">container location</label>
+                        <input type="text" placeholder="container location" class="form-control" name="name" value="{{container.container_location}}">
+                      </div>
                         <label class="form-control-label">container status</label>
-                        <select id="container_status" name="status">
+                        <select id="container_status" name="status" class="form-control">
                           {% if container.container_status == 'E' %}
                           <option value="E" selected>Empty</option>
                           <option value="L">Laden</option>
@@ -104,7 +104,7 @@
                         </div>
                       <div class="form-group">       
                         <label class="form-control-label"> container size</label>
-                        <select id="size" name="size">
+                        <select id="size" name="size" class="form-control">
                           {% if container.container_size == 20 %}
                           <option value="20" selected>20</option>
                           <option value="40">40</option>
@@ -115,7 +115,7 @@
                         </select>
                       </div>
                         <label class="form-control-label">cargo</label>
-                        <select id="cargo" name="cargo">
+                        <select id="cargo" name="cargo" class="form-control">
                           {% if container.cargo == 'D' %}
                           <option value="D" selected>Dry goods</option>
                           <option value="H">Hazardous materials</option>
@@ -148,7 +148,7 @@
         <footer class="footer">
           <div class="footer__block block no-margin-bottom">
             <div class="container-fluid text-center">
-              <p class="no-margin-bottom">2018 &copy; Your company. Download From <a target="_blank" href="https://templateshub.net">Templates Hub</a>.</p>
+                <p class="no-margin-bottom">2023 &copy; Your company ATAI. <a target="_blank" href="https://www.atai.ai/">ATAI.ai</a>.</p>
             </div>
           </div>
         </footer>

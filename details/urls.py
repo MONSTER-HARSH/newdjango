@@ -8,7 +8,9 @@ urlpatterns = [
     path('create',createcontainer),
     path('store',store,name='store'),
     path('',index),
+    path('home',home),
+    path('containerview',searchcontainer,name='searchcontainer'),
     path('containerview/<int:pk>',viewcontainer,name='viewcontainer'),
-    path('delete/<int:pk>',deletecontainer,name='deletecontainer'),
     path('update/<int:pk>',updatecontainer, name='updatecontainer'),
+    path('delete/<int:pk>',deletecontainer,name='deletecontainer'),
 ]
